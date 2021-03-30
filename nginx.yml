@@ -62,3 +62,12 @@ spec:
             name: test
             port:
               number: 80
+---
+apiVersion: configuration.konghq.com/v1
+kind: KongIngress
+metadata:
+  name: test-linkerd
+route:
+  preserve_host: false
+upstream:
+  host_header: test.online.svc
